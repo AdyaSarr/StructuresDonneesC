@@ -31,5 +31,5 @@
     void display_player(element_t element);
     int length_stack(stack_player_type stack);
     stack_player_type clear_stack(stack_player_type stack);
-    
+    stack_player_type dump_stack(stack_player_type stack1, stack_player_type stack2);
 #endif

@@ -83,3 +83,7 @@ stack_player_type clear_stack(stack_player_type stack){
     return empty_stack();
 }
 /*------------------------------------------------------------------------------------------*/
+stack_player_type dump_stack(stack_player_type stack1, stack2){
+    
+}
+/*------------------------------------------------------------------------------------------*/
