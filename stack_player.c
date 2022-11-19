@@ -83,7 +83,23 @@ stack_player_type clear_stack(stack_player_type stack){
     return empty_stack();
 }
 /*------------------------------------------------------------------------------------------*/
-stack_player_type dump_stack(stack_player_type stack1, stack2){
+stack_player_type dump_stack(stack_player_type stack1, stack_player_type stack2){
+    if (stack1 == NULL && stack2 == NULL)
+        return empty_stack();
     
+    if (stack1 == NULL && stack2 != NULL)
+        return stack2;
+    
+    if(stack1 != NULL && stack2 == NULL)
+        return stack1;
+
+    stack_player *stackTemp = stack2;
+    
+    while (stack1!=NULL)
+    {
+        stackTemp = push_stack(stackTemp, top_stack(stack1));
+        stack1 = stack1->next;
+    }
+    return stackTemp;
 }
 /*------------------------------------------------------------------------------------------*/
