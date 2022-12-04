@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 {
     stack_player_type mystack = empty_stack();
     stack_player_type mystack1 = empty_stack();
-    stack_player_type dumpctack = empty_stack();
+    //stack_player_type dumpctack = empty_stack();
 
     element_t moi = {"Adya", 4};
     element_t ass = {"Assane", 12};
@@ -44,24 +44,25 @@ int main(int argc, char const *argv[])
 
     printf("\n---------------------------------Dump de mystack et mystack1--------------------------------------\n");
 
-    dumpctack = dump_stack(mystack1, mystack);
-    display_stack(dumpctack);
+   // stack_player_type dumpctack = dump_stack(mystack1, mystack);
+
+    //display_stack(dumpctack);
     printf("Le joueur au sommet de la PILE est:");
-    display_player(top_stack(dumpctack));
-    printf("La Longueur de la PILE est : %d\n", length_stack(dumpctack));
+   // display_player(top_stack(dumpctack));
+  // printf("La Longueur de la PILE est : %d\n", length_stack(dumpctack));
 
     printf("\n----------------------------------------------j-------------------------\n");
 
     mystack = clear_stack(mystack);
     mystack1 = clear_stack(mystack1);
-    dumpctack = clear_stack(dumpctack);
+    //dumpctack = clear_stack(dumpctack);
 
-    display_stack(mystack);
-    display_player(top_stack(mystack));
+    display_stack(mystack);//affiche l'arbinaire
+    display_player(top_stack(mystack));//affiche le sommet de l'arbre
     display_stack(mystack1);
     display_player(top_stack(mystack1));
-    display_stack(dumpctack);
-    display_player(top_stack(dumpctack));
+    //display_stack(dumpctack);
+    //display_player(top_stack(dumpctack));
     printf("La Longueur de la PILE est : %d\n", length_stack(mystack));
     printf("\n-----------------------------------------------------------------------\n");
     return 0;
