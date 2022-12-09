@@ -25,7 +25,7 @@ element_t last_element_queue(void){
 }
 
 void print_player(element_t element){
-    printf("Nom : [%s] - Niveau [%d]", element.nom, element.level);
+    printf("Nom : [%s] - Niveau [%d]\n", element.nom, element.level);
 }
 void print_queue(void){
 
@@ -38,7 +38,6 @@ void print_queue(void){
     while (queueTemp != NULL)
     {
         print_player(queueTemp->value);
-        print_queue();
         queueTemp = queueTemp->nextQueue;
     }
     printf("\n");
@@ -60,10 +59,12 @@ void enqueue(element_t value){
     {
         first = queueTemp;
         last = queueTemp;
+        printf("ajout fait");
     }else
     {
         last->nextQueue = queueTemp;
-        last = queueTemp;   
+        last = queueTemp;
+        printf("ajout fait"); 
     }
     nombre_element++;
     
@@ -73,7 +74,7 @@ void dequeue(void){
 
     if (is_empty_queue())
     {
-        printf("La File est vide\n");
+        printf("La File est vide fd\n");
         return;
     }
     else
@@ -92,23 +93,17 @@ void dequeue(void){
         nombre_element--;
     }    
 }
-
-Queue clear_queue(void){
+void clear_queue(void){
     if (is_empty_queue())
     {
-        printf("La File est vide\n");   
-        return NULL;
+        printf("La File est vide\n");
+        return;
     }
     else
     {
-        QueuePlayer * queueTemp = first;
-        while (queueTemp != NULL)
+        while (is_empty_queue())
         {
             dequeue();
-            nombre_element--;
-        }
-        return NULL;   
+        } 
     }
-    
-    
 }

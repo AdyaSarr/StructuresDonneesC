@@ -36,5 +36,5 @@
     void print_player(element_t);
     void enqueue(element_t value);
     void dequeue(void);
-    Queue clear_queue(void);
+    void clear_queue(void);
 #endif
