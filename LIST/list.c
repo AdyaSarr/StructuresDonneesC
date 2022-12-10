@@ -118,7 +118,6 @@ List clear_list(List liste){
     while (!is_empty_list(liste))
     {
         liste = delete_front_list(liste);
-        liste = liste->nextList;
     }
     return empty_list();
 }
