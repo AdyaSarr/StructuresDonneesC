@@ -51,13 +51,16 @@ List insert_front_list(List liste, element_t element){
     if (is_empty_list(liste))
     {
         liste->nextList = NULL;
+        printf("fdm\n");
         return listemp;
     }
-    
-    listemp->nextList = liste;
+    else
+    {
+        listemp->nextList = liste;
+    }
     return listemp;
-    
 }
+
 List insert_back_list(List liste, element_t element){
     ElementList *listemp;
     listemp = malloc(sizeof(*listemp));
@@ -81,7 +84,6 @@ List insert_back_list(List liste, element_t element){
     }
     temp->nextList = listemp;
     return liste;
-    
 }
 
 List delete_back_list(List liste){
